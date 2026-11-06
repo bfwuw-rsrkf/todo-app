@@ -10,7 +10,7 @@ FROM python:3.12-alpine
 WORKDIR /code
 
 COPY --from=builder /install /usr/local
-copy app/ app/
+COPY app/ app/
 
 EXPOSE 5000
 CMD ["python", "-m", "app.main"]
