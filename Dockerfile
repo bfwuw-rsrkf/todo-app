@@ -3,7 +3,7 @@ FROM python:3.12-alpine AS builder
 WORKDIR /install
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
 FROM python:3.12-alpine
 
